@@ -1,0 +1,32 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.fav-crickter{
+  border: 10px solid blue;
+  margin: 10px;
+  padding:5px;
+}
+.ms-dhoni{
+      width:25%;
+      float: left;
+      
+}
+.abd{
+    width:25%;
+    float: left;
+}
+.virat-kholi{
+    width:25%;
+    float: left;
+}
+.chris-gayle{
+    width:25%;
+    float: left;
+}
+.fav-crickter::after{
+    content:"";
+    display: block;
+    clear: left;
+}
