@@ -1,0 +1,40 @@
+<!--Inner Height & Inner Widdth-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin:0px;
+            background:green;
+        }
+        #div1{
+            height: 150vh;
+            color: white;
+             display: flex; 
+             justify-content: center; 
+             align-items: center; 
+             font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <div id="div2">
+             Inner Height:
+        </div>
+    </div>
+    <script>
+        window.addEventListener("scroll",()=>{
+            var node2 = document.getElementById("div2");
+            node2.innerHTML = `Inner Height ${window.innerHeight} PageYOffset ${window.pageYOffset} BodyHeight ${document.body.offsetHeight}
+            Addtion ${window.innerHeight+window.pageYOffset}`;
+            const totalHeight = window.innerHeight+window.pageYOffset;
+            if(Math.ceil(totalHeight)>=document.body.offsetHeight){
+                 alert("Reached Bottom");
+        }})
+    </script>
+</body>
+</html>

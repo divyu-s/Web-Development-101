@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            min-height: 100px;
+            min-width: 100px;
+            border:1px solid;
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!--Event Propagation-->
+    <div id="grand-parent">
+        <div id="parent">
+            <div id="grand-child">
+
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script>
+    document.querySelector("#grand-parent").addEventListener("click",(e)=>{
+        console.log("grand-parent is clicked");
+    },true)
+    document.querySelector("#parent").addEventListener("click",(e)=>{
+        e.stopPropagation();
+        console.log("parent is clicked");
+    },true)
+    document.querySelector("#grand-child").addEventListener("click",(e)=>{
+        console.log("grand-child is clicked");
+    },true)
+    
+    </script>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Event Listener-->
+    <button id="alert-button">Click Me</button>
+    <script>
+        document.getElementById("alert-button").addEventListener('click',alertUser);
+       document.getElementById("alert-button").addEventListener('click',consoleUser);
+        function alertUser(){
+            alert("Hello");
+        }
+        function consoleUser(){
+            console.log("Hello World");
+        }
+    </script>
+</body>
+</html>

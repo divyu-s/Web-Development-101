@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Grocery List</h1>
+    <!--i>nput fields -->
+    <input id="item-name-input" type="text">
+    </br>
+    <input id="item-price-input" type="number">
+    <button id="button" onclick="insertItem()">Add</button>
+    <table id="table">
+            <tr>
+                 <th>Sr. No.</th>
+                <th>Title</th>
+                <th>Price</th>
+            </tr>
+    </table>
+    <script>
+        
+function insertItem(){
+   let name = document.getElementById("item-name-input"); 
+   let price = document.getElementById("item-price-input");
+   console.log(name.value);
+   console.log(price.value);
+   let table = document.getElementById("table");
+   let row = document.createElement("TR");
+   let srn = document.createElement("TD");
+   let name1 = document.createElement("TD");
+   let price1 = document.createElement("TD");
+   name1.innerHtml=name.value;
+   price1.innerHtml=Number(price.value);
+   srn.innerHTML = Number(srn.innerHTML) + 1;
+   row.appendChild(srn);
+   row.appendChild(name1);
+   row.appendChild(price1);
+   table.appendChild(row);
+}
+             </script>
+</body>
+</html>

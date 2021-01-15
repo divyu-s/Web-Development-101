@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        function division(x){
+            throw new Error("Error");
+        }
+        function multiply(x,y){
+            const something = division(x);
+            return x*y;
+        }
+        function printSquare(x){
+            const s = multiply(x,x)
+            return s;
+        }
+        console.log(printSquare(5));
+        // console.log("1");
+        // console.log("2");
+        // setTimeout(function(){
+        //   console.log("3");
+        // },5000);
+        // console.log("4")
+        // setInterval(function(){
+        //     console.log("8")
+        //     console.log("Interval")
+        // },2000)
+
+    </script>
+</body>
+</html>
