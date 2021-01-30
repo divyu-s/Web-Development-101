@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin : 0px;
+           background : green;
+        }
+        #div1{
+            height : 150vh;
+            width: 100vh;
+        }
+        </style>
+</head>
+<body>
+    <div id="div1"> 
+    </div>
+</body>
+<script>
+    //while(true){
+    var div = document.createElement("DIV");
+   div.style.cssText = 'position:absolute;width:100vh;height:150vh;opacity:0.3;z-index:100;background:#000';
+//div.setAttribute("style","height:100%;background:yellow;");
+//div.setAttribute("style","weight:100%");
+window.addEventListener("scroll",()=>{
+    //console.log(window.innerHeight);
+    //console.log(window.pageYOffset);
+    
+    var totalHeight = window.innerHeight + window.pageYOffset;
+    console.log(totalHeight);
+    console.log(document.body.offsetHeight);
+   console.log(totalHeight>=document.body.offsetHeight-2)
+    if(totalHeight>=document.body.offsetHeight-2){
+        document.body.appendChild(div);   
+}
+}
+)
+  // }
+</script>
+</html>

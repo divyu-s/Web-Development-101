@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                margin : 0px;
+               background : green;
+            }
+            #div1{
+                height : 100vh;
+                weight: 100vh;
+            }
+            </style>
+    </head>
+    <body>
+        <div id="div1"> 
+        </div>
+    </body>>
+    <script>
+        window.addEventListener("scroll",()=>{
+    var totalHeight = window.innerHeight + window.pageYOffset;
+    if(Math.ceil(totalHeight)>=document.body.offsetHeight){
+      var div = document.createElement("DIV");
+      div.setAttribute("style","height:100vh;");
+      div.setAttribute("style","width:100vh");
+      div.setAttribute("style","background-color:blue");
+      document.body.appendChild(div);
+}
+}
+)
+    </script>
+</html>

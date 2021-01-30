@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //this keyword
+        // function foo() {
+        //     console.log("This is ",this)
+        // }
+        // window.foo()
+        function  something() {
+            console.log(this);
+        }
+        function baz() {
+            let a = "Hello"
+            something()
+        }
+        function bar() {
+            baz();
+        }
+        function foo() {
+            bar();
+        }
+        //foo();
+        //Default Binding
+        //decide call site and this will refer to call site object
+        // var a = "hello"
+        // function foo() {
+        //     console.log("This is",this.a);
+        // }
+        // foo();
+        //Implicit Biniding
+        // const a = {
+        //     caller : "Some Person",
+        //     foo : function () {
+        //         console.log(this.caller)
+        //     }
+        // }
+        // var caller = "Some Other Person"
+        // let storedFunction = a.foo;
+        // storedFunction();
+        //Explicit Binding
+          //bind,call,apply ->100%Interview Question
+        //   var pokeman = {
+        //       firstname : "pika",
+        //       lastname : "chu",
+        //       getPokeName : function(){
+        //           var fullname = this.firstname + this.lastname
+        //           return fullname;
+        //   }
+        // };
+        // var pokemonName = function(){
+        //     console.log(this.getPokeName()+"I choose you")
+        // }
+        // var logPokemon = pokemonName.bind(pokeman);
+        // logPokemon()
+      //call
+    //   var pokeman = {
+    //           firstname : "pika",
+    //           lastname : "chu",
+    //           getPokeName : function(){
+    //               var fullname = this.firstname + this.lastname
+    //               return fullname;
+    //       }
+    //     };
+    //     var pokemonName = function(snack,hobby){
+    //         console.log(this.getPokeName()+"I choose you and my favorite snack is"
+    //        +snack + "Hobby" + hobby)
+    //     }
+    //     pokemonName.call(pokeman,"pizza","reading");
+        // var pokeman = {
+        //       firstname : "pika",
+        //       lastname : "chu",
+        //       getPokeName : function(){
+        //           var fullname = this.firstname + this.lastname
+        //           return fullname;
+        //   }
+        // };
+        // var pokemonName = function(snack,hobby){
+        //     console.log(this.getPokeName()+"I choose you and my favorite snack is"
+        //    +snack  + hobby +"Hobby")
+        // }
+        // pokemonName.apply(pokeman,["pizza","reading"]);
+
+
+    </script>
+</body>
+</html>

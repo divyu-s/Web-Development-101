@@ -1,0 +1,31 @@
+//Objects
+<html>
+    <body></body>
+    <script>
+const obj = {
+    a:"Hello",
+    b:"World",
+    c : {
+        addresss : "I am at this address",
+        city : {
+            state : "Panjab",
+            name : "Patiyala"
+        }
+    }
+};
+//Shallow Copy
+const obj2 = Object.assign({},obj);
+// const obj2 = {...obj};
+//Deep Copy
+// JSON.stringify Converts obj to string and stores at new location
+// JSON.parse converts string to obj
+//const obj2 = JSON.parse(JSON.stringify(obj));
+obj2.a = "Not Hello";
+obj2.c.addresss = "I am not at this address";
+console.log(obj.c.addresss);
+console.log(obj2.c.addresss);
+//Shallow Copy Vs Deep Copy
+//Shallow: When only level 0 elements are copied by value
+//Deep: Each and every object is copied by value
+</script>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Exception=> Arrow Function-->
+    <script>
+         //Arrow function adopt this binding of enclosing scope
+         //Lexical Binding of arrow functions can not be ovverriden ( even explicitly)
+        //  function foo(){
+        //      return (a) =>{
+        //          console.log(this.a)
+        //      }
+        //  }
+        //  var obj1 = { a:2}
+        //  var obj2 = {a:3}
+        //  var bar = foo.call(obj1);
+        //  bar.call(obj2);
+         function foo(){
+             setTimeout(
+                 ()=> {
+                     console.log(this.a);
+                 },100
+             )
+         }
+         var obj = {a: 2};
+         foo.call(obj);
+    </script>
+</body>
+</html>
